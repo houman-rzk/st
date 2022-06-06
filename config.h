@@ -9,6 +9,20 @@ static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
+ * Override/adjust fontsize of choosen monitors:
+ */
+MonitorConfig monitors_config[] = {
+	// skip = fixed relative points size (monitor dpi)
+	//   =0 : fixed absolute pixel size (default screen dpi)
+	//   >0 : auto absolute pixel size (monitor dpi)
+	//   <0 : auto relative points size (monitor dpi)
+	// {"DP-1", 0}, // BUG:(size=0): not restored to default after back'n'forth
+	{"HDMI-0~1", -20},  // BUG:(ignored DPI=220): = 20 is eqv to 10pt (DPI=110)
+	{"HDMI-0~2", -14},
+};
+float winmovethreshold = 0.6;
+
+/*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
  * 2: scroll and/or utmp
@@ -208,7 +222,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
-#define TERMMOD (ControlMask|ShiftMask)
+#define TERMMOD (MODKEY|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -216,9 +230,10 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	{ TERMMOD,              XK_Up,          zoom,           {.f = +2} },
+	{ TERMMOD,              XK_Down,        zoom,           {.f = -2} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_End,         refreshxrandr,  {.i =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },

@@ -124,7 +124,7 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-
+/*
 	// gruvbox-dark custom
 	[0] = "#282828", // hard contrast: #1d2021 / soft contrast: #32302f 
 	[1] = "#cc241d", // red     
@@ -142,38 +142,81 @@ static const char *colorname[] = {
 	[13] = "#d3869b", // magenta 
 	[14] = "#8ec07c", // cyan    
 	[15] = "#ebdbb2", // white   
+	[255] = 0,
+	[256] = "#ebdbb2",
+	[257] = "#f8f8f2",
+    	[258] = "#ffffff", // white
+	[259] = "#111111", // smoky black	
+*/
+
+
+	// gruvbox-dark
+	[0] = "#282828", // hard contrast: #1d2021 / soft contrast: #32302f 
+	[1] = "#cc241d", // red     
+	[2] = "#98971a", // green   
+	[3] = "#d79921", // yellow  
+	[4] = "#458588", // blue    
+	[5] = "#b16286", // magenta 
+	[6] = "#689d6a", // cyan    
+	[7] = "#a89984", // white   
+	[8]  = "#928374", // black   
+	[9]  = "#fb4934", // red     
+	[10] = "#b8bb26", // green   
+	[11] = "#fabd2f", // yellow  
+	[12] = "#83a598", // blue    
+	[13] = "#d3869b", // magenta 
+	[14] = "#8ec07c", // cyan    
+	[15] = "#ebdbb2", // white   
+	[255] = 0,
+    	[256] = "#ebdbb2", // background 
+    	[257] = "#f8f8f2",
+    	[258] = "#ebdbb2",	
+    	[259] = "#282828",	
+
+
+/*
+	// dracula
+    	[0] = "#000000", // black   
+    	[1] = "#ff5555", // red     
+    	[2] = "#50fa7b", // green   
+    	[3] = "#f1fa8c", // yellow  
+    	[4] = "#bd93f9", // blue    
+    	[5] = "#ff79c6", // magenta 
+    	[6] = "#8be9fd", // cyan    
+    	[7] = "#bbbbbb", // white   
+    	[8]  = "#44475a", // black   
+    	[9]  = "#ff5555", // red     
+    	[10] = "#50fa7b", // green   
+    	[11] = "#f1fa8c", // yellow  
+    	[12] = "#bd93f9", // blue    
+    	[13] = "#ff79c6", // magenta 
+    	[14] = "#8be9fd", // cyan    
+    	[15] = "#ffffff", // white   
+	[255] = 0,
+    	[256] = "#f8f8f2", // background 
+    	[257] = "#f8f8f2", // foreground 
+    	[258] = "#f8f8f2", // smoky black	
+    	[259] = "#282a36", // eerie black	
+*/
 
 
 // gruvbox-light
-//[0] = "#fbf1c7", [1] = "#cc241d", [2] = "#98971a", [3] = "#d79921", [4] = "#458588", [5] = "#b16286", [6] = "#689d6a", [7] = "#7c6f64", [8] = "#928374", [9] = "#9d0006", [10] = "#79740e", [11] = "#b57614", [12] = "#076678", [13] = "#8f3f71", [14] = "#427b58", [15] = "#3c3836",
+//[0] = "#fbf1c7", [1] = "#cc241d", [2] = "#98971a", [3] = "#d79921", [4] = "#458588", [5] = "#b16286", [6] = "#689d6a", [7] = "#7c6f64", [8] = "#928374", [9] = "#9d0006", [10] = "#79740e", [11] = "#b57614", [12] = "#076678", [13] = "#8f3f71", [14] = "#427b58", [15] = "#3c3836", [255] = 0, [256] = "#3c3836", [257] = "#f8f8f2", [258] = "#3c3836", [259] = "#fbf1c7",
 
 
 // base 16
-//[0] = "#181818", [1] = "#ab4642", [2] = "#a1b56c", [3] = "#f7ca88", [4] = "#7cafc2", [5] = "#ba8baf", [6] = "#86c1b9", [7] = "#d8d8d8", [8] = "#585858", [9] = "#ab4642", [10] = "#a1b56c", [11] = "#f7ca88", [12] = "#7cafc2", [13] = "#ba8baf", [14] = "#86c1b9", [15] = "#f8f8f8",
+//[0] = "#181818", [1] = "#ab4642", [2] = "#a1b56c", [3] = "#f7ca88", [4] = "#7cafc2", [5] = "#ba8baf", [6] = "#86c1b9", [7] = "#d8d8d8", [8] = "#585858", [9] = "#ab4642", [10] = "#a1b56c", [11] = "#f7ca88", [12] = "#7cafc2", [13] = "#ba8baf", [14] = "#86c1b9", [15] = "#f8f8f8", [255] = 0, [256] = "#ebdbb2", [257] = "#f8f8f2", [258] = "#ffffff", [259] = "#111111",	 
 
 
 // solarized
-//[0] = "#073642", [1] = "#dc322f", [2] = "#859900", [3] = "#b58900", [4] = "#268bd2", [5] = "#d33682", [6] = "#2aa198", [7] = "#eee8d5", [9] = "#cb4b16", [8] = "#fdf6e3", [10] = "#586e75", [11] = "#657b83", [12] = "#839496", [13] = "#6c71c4", [14] = "#93a1a1", [15] = "#fdf6e3",
+//[0] = "#073642", [1] = "#dc322f", [2] = "#859900", [3] = "#b58900", [4] = "#268bd2", [5] = "#d33682", [6] = "#2aa198", [7] = "#eee8d5", [9] = "#cb4b16", [8] = "#fdf6e3", [10] = "#586e75", [11] = "#657b83", [12] = "#839496", [13] = "#6c71c4", [14] = "#93a1a1", [15] = "#fdf6e3", [255] = 0, [256] = "#ebdbb2", [257] = "#f8f8f2", [258] = "#ffffff", [259] = "#111111",	  
 
 
 // xterm
-//[0] = "#000000", [1] = "#cd0000", [2] = "#00cd00", [3] = "#cdcd00", [4] = "#0000cd", [5] = "#cd00cd", [6] = "#00cdcd", [7] = "#e5e5e5", [8] = "#4d4d4d", [9] = "#ff0000", [10] = "#00ff00", [11] = "#ffff00", [12] = "#0000ff", [13] = "#ff00ff", [14] = "#00ffff", [15] = "#aabac8",
+//[0] = "#000000", [1] = "#cd0000", [2] = "#00cd00", [3] = "#cdcd00", [4] = "#0000cd", [5] = "#cd00cd", [6] = "#00cdcd", [7] = "#e5e5e5", [8] = "#4d4d4d", [9] = "#ff0000", [10] = "#00ff00", [11] = "#ffff00", [12] = "#0000ff", [13] = "#ff00ff", [14] = "#00ffff", [15] = "#aabac8", [255] = 0, [256] = "#ebdbb2", [257] = "#f8f8f2", [258] = "#ffffff", [259] = "#111111",	  
 
 
 
-    // special colors 
-    [256] = "#282a36", // background 
-    [257] = "#f8f8f2", // foreground 
-    
-    //	Added by ache	
-    [258] = "#111111", // smoky black	
-    [259] = "#222222", // eerie black	
-
-	// more colors can be added after 255 to use with DefaultXX 
-	"#cccccc",
-	"#555555",
-	"gray90", // default foreground colour 
-	"black", // default background colour 
 };
 
 
@@ -181,10 +224,11 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 15;
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 259;
+unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
+
 
 unsigned int defaultitalic = 7;
 unsigned int defaultunderline = 7;
@@ -264,8 +308,10 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Page_Down,   zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_End,         refreshxrandr,  {.i =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+	//{ TERMMOD,		XK_C,           clipcopy,       {.i =  0} },
+	//{ TERMMOD,		XK_V,           clippaste,      {.i =  0} },
+	{ ControlMask|ShiftMask,XK_C,           clipcopy,       {.i =  0} },
+	{ ControlMask|ShiftMask,XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },

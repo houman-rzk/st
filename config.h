@@ -131,7 +131,7 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-/*
+
 	// gruvbox-dark custom
 	[0] = "#282828", // hard contrast: #1d2021 / soft contrast: #32302f 
 	[1] = "#cc241d", // red     
@@ -154,9 +154,9 @@ static const char *colorname[] = {
 	[257] = "#f8f8f2",
     	[258] = "#ffffff", // white
 	[259] = "#111111", // smoky black	
-*/
 
 
+/*
 	// gruvbox-dark
 	[0] = "#282828", // hard contrast: #1d2021 / soft contrast: #32302f 
 	[1] = "#cc241d", // red     
@@ -181,7 +181,7 @@ static const char *colorname[] = {
     	[259] = "#282828",	
 
 
-/*
+
 	// dracula
     	[0] = "#000000", // black   
     	[1] = "#ff5555", // red     

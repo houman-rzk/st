@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Mono:pixelsize=15:antialias=true:autohint=true";
-static char *font = "monospace:size=11";
+static char *font = "monospace:size=10";
 /* Spare fonts */
 static char *font2[] = {
 	//"JoyPixels:pixelsize=15:antialias=true:autohint=true",
@@ -151,9 +151,10 @@ static const char *colorname[] = {
 	[14] = "#8ec07c", // cyan    
 	[15] = "#ebdbb2", // white   
 	[255] = 0,
-	[256] = "#ebdbb2",
+	//[256] = "#ebdbb2",
+	[256] = "#111111",
 	[257] = "#f8f8f2",
-    	[258] = "#ffffff", // white
+    [258] = "#ffffff", // white
 	[259] = "#111111", // smoky black	
 };
 

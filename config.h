@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Mono:pixelsize=15:antialias=true:autohint=true";
-static char *font = "monospace:size=10";
+static char *font = "monospace:size=9";
 /* Spare fonts */
 static char *font2[] = {
 	//"JoyPixels:pixelsize=15:antialias=true:autohint=true",
@@ -129,6 +129,8 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 0.9;
+float alphaOffset = 0.0;
+float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -373,6 +375,8 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Down,	kscrolldown,    {.i = -1} },
     { TERMMOD,              XK_U,           kscrollup,      {.i = -1} },
     { TERMMOD,              XK_D,   kscrolldown,    {.i = -1} },
+    { LEFTALT,		XK_s,		changealpha,	{.f = -0.05} },
+	{ LEFTALT,		XK_a,		changealpha,	{.f = +0.05} },
 };
 
 /*

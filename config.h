@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Mono:pixelsize=15:antialias=true:autohint=true";
-static char *font = "monospace:size=9";
+static char *font = "monospace:size=8:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	//"JoyPixels:pixelsize=15:antialias=true:autohint=true",
@@ -25,8 +25,9 @@ MonitorConfig monitors_config[] = {
 	//   >0 : auto absolute pixel size (monitor dpi)
 	//   <0 : auto relative points size (monitor dpi)
 	// {"DP-1", 0}, // BUG:(size=0): not restored to default after back'n'forth
-	{"HDMI-0~1", -20},  // BUG:(ignored DPI=220): = 20 is eqv to 10pt (DPI=110)
-	{"HDMI-0~2", -14},
+	//{"HDMI-0~1", -20},  // BUG:(ignored DPI=220): = 20 is eqv to 10pt (DPI=110)
+	//{"HDMI-0~2", -14},
+	{"HDMI1", 16},  // BUG:(ignored DPI=220): = 20 is eqv to 10pt (DPI=110)
 };
 float winmovethreshold = 0.6;
 

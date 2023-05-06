@@ -9,9 +9,9 @@
 static char *font = "Source Code Pro:size=7.5:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	//"JoyPixels:pixelsize=15:antialias=true:autohint=true",
-	"BitstreamVeraSansMono Nerd Font Mono:style=Roman:pixelsize=30",
-	"NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"
+	"BitstromWera Nerd Font Mono:style=Regular",
+	//"BitstreamVeraSansMono Nerd Font Mono:style=Roman:pixelsize=30",
+	//"NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"
 };
 
 static int borderpx = 6;
@@ -307,8 +307,8 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ ShiftMask,            XK_Up,		    kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Down,	    kscrolldown,    {.i = -1} },
-    { TERMMOD,              XK_U,           kscrollup,      {.i = -1} },
-    { TERMMOD,              XK_D,           kscrolldown,    {.i = -1} },
+    { TERMMOD,              XK_u,           kscrollup,      {.i = -1} },
+    { TERMMOD,              XK_d,           kscrolldown,    {.i = -1} },
     { LEFTALT,		        XK_s,		    changealpha,	{.f = -0.05} },
 	{ LEFTALT,		        XK_a,		    changealpha,	{.f = +0.05} },
 	{ LEFTALT,              XK_o,           externalpipe,   {.v = openurlcmd } },

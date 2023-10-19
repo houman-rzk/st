@@ -6,9 +6,10 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "Mono:pixelsize=8:antialias=true:autohint=true";
-static char *font = "Source Code Pro:size=7.5:antialias=true:autohint=true";
+//static char *font = "Source Code Pro:size=7.5:antialias=true:autohint=true";
+static char *font = "JetBrainsMono NF:size=7";
 /* Spare fonts */
-static char *font2[] = { "BitstromWera Nerd Font Mono:style=Regular:antialias=true:autohint=true", //"BitstreamVeraSansMono Nerd Font Mono:style=Roman:pixelsize=30",
+static char *font2[] = { "JetBrainsMono NF:size=7", //"BitstreamVeraSansMono Nerd Font Mono:style=Roman:pixelsize=30",
 	//"NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"
 };
 
